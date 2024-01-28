@@ -1,4 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="width: 100%;position: fixed; z-index: 10;">
+ <!-- Navigation-->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container px-4 px-lg-5">
         <a class="navbar-brand" href="#!">Start Bootstrap</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -16,18 +17,25 @@
                     </ul>
                 </li>
             </ul>
-            <form class="d-flex gap-3">
-                <button style="border: none; outline: none; background-color: transparent;" type="submit" routerLink="/signup">
-                  Sign Up
-                </button>
+            <form class="d-flex">
                 <button class="btn btn-outline-dark" type="submit" routerLink="/login">
-                    Log In
+                    Login
                 </button>
                 <button class="btn btn-outline-dark" type="submit">
-                  <i class="bi-cart-fill me-1"></i>
-                  <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                    <i class="bi-cart-fill me-1"></i>
+                    Cart
+                    <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
                 </button>
             </form>
         </div>
     </div>
-  </nav>
+</nav>
+<!-- Header-->
+<header class="bg-dark py-5">
+    <div class="container px-4 px-lg-5 my-5">
+        <div class="text-center text-white">
+            <h1 class="display-4 fw-bolder">Shop in style</h1>
+            <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+        </div>
+    </div>
+</header>

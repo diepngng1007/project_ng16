@@ -47,11 +47,8 @@ import { CategoriesComponent } from './page/admin/categories/categories.componen
     ProductsComponent,
     DetailComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent, RouterModule, HttpClientModule]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
