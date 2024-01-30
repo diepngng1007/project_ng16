@@ -23,6 +23,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { DetailComponent } from './page/detail/detail.component';
 import { CategoriesComponent } from './page/admin/categories/categories.component';
+import { BannerComponent } from './component/banner/banner.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { CategoriesComponent } from './page/admin/categories/categories.componen
     ProductUpdateComponent,
     ProductsComponent,
     DetailComponent,
+    BannerComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
