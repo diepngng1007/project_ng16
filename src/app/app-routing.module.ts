@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate } from '@angular/router';
 import { LayoutClientComponent } from './layout/layout-client/layout-client.component';
 import { HomeComponent } from './page/home/home.component';
 import { LoginComponent } from './page/login/login.component';
@@ -17,6 +17,7 @@ import { CategoriesUpdateComponent } from './page/admin/categories-update/catego
 import { NotFoundComponent } from './page/not-found/not-found.component';
 import { DetailComponent } from './page/detail/detail.component';
 import { CategoriesComponent } from './page/admin/categories/categories.component';
+import { adminGuardGuard } from './guard/admin-guard.guard';
 
 const routes: Routes = [
   {
@@ -35,6 +36,7 @@ const routes: Routes = [
   {
     path: 'admin',
     component: LayoutAdminComponent,
+    canActivate: [adminGuardGuard],
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },

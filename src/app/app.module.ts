@@ -24,6 +24,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { DetailComponent } from './page/detail/detail.component';
 import { CategoriesComponent } from './page/admin/categories/categories.component';
 import { BannerComponent } from './component/banner/banner.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SidebarAdminComponent } from './component/sidebar-admin/sidebar-admin.component';
+import { NavAdminComponent } from './component/nav-admin/nav-admin.component';
 
 @NgModule({
   declarations: [
@@ -47,9 +50,11 @@ import { BannerComponent } from './component/banner/banner.component';
     ProductUpdateComponent,
     ProductsComponent,
     DetailComponent,
-    BannerComponent
+    BannerComponent,
+    SidebarAdminComponent,
+    NavAdminComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

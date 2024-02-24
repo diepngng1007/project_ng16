@@ -1,1 +1,44 @@
-<p>signup works!</p>
+<div class="signup-form">
+    <form class="form-horizontal" (ngSubmit)="submitForm()" [formGroup]="signUpForm">
+      	<div class="row">
+        	<div class="col-8 offset-4">
+				<h2>Sign Up</h2>
+			</div>	
+      	</div>			
+        <div class="form-group row my-3">
+			<label class="col-form-label col-4">Username</label>
+			<div class="col-8">
+                <input type="text" class="form-control" formControlName="username" required="required">
+				<span *ngIf="signUpForm.get('username')?.hasError('required')" class="text-danger">Trường này không được để trống</span>
+            </div>        	
+        </div>
+		<div class="form-group row my-3">
+			<label class="col-form-label col-4">Email Address</label>
+			<div class="col-8">
+                <input type="email" class="form-control" formControlName="email" required="required">
+				<span *ngIf="signUpForm.get('email')?.hasError('required')" class="text-danger">Trường này không được để trống</span>
+            </div>        	
+        </div>
+		<div class="form-group row my-3">
+			<label class="col-form-label col-4">Password</label>
+			<div class="col-8">
+                <input type="password" class="form-control" formControlName="password" required="required">
+				<span *ngIf="signUpForm.get('password')?.hasError('required')" class="text-danger">Trường này không được để trống</span>
+            </div>        	
+        </div>
+		<div class="form-group row my-3">
+			<label class="col-form-label col-4">Confirm Password</label>
+			<div class="col-8">
+                <input type="password" class="form-control" formControlName="confirmPass" autocomplete="new-password" required="required">
+				<span *ngIf="signUpForm.get('password')?.hasError('required')" class="text-danger">Trường này không được để trống</span>
+            </div>        	
+        </div>
+		<div class="form-group row">
+			<div class="col-8 offset-4">
+				<p><label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a>.</label></p>
+				<button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+			</div>  
+		</div>		      
+    </form>
+	<div class="text-center">Already have an account? <a routerLink="/login">Login here</a></div>
+</div>
